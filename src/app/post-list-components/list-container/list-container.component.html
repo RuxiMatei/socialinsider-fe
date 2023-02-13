@@ -13,8 +13,7 @@
         </mat-form-field>
       </div>
 
-      <div class="form-group">
-        <!-- <p class="instructions">Choose Profile</p> -->
+      <!-- <div class="form-group">
         <div class="radios" >
           <mat-button-toggle-group #group="matButtonToggleGroup" formControlName="profile">
             <mat-button-toggle 
@@ -24,7 +23,7 @@
             </mat-button-toggle>
           </mat-button-toggle-group>
         </div>
-      </div>
+      </div> -->
 
       <div class="form-group inline range-picker">
         <mat-form-field appearance="fill">
@@ -58,7 +57,7 @@
       <app-list-item 
         [posts]="posts" 
         [currentProfileType]="currentProfileType"
-        [currentBrand]="currentBrand"></app-list-item>
+        [currentBrand]="currentBrandName"></app-list-item>
     </div>
 
   </div>
