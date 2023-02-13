@@ -1,0 +1,22 @@
+.header-container {
+    max-width: 100%;
+    margin: 0;
+
+    background-color: var(--light-blue);
+    padding: 2rem 15%;
+
+}
+
+p {
+    color: var(--white);
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

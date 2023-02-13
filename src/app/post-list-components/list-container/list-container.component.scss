@@ -1,0 +1,66 @@
+
+.inline {
+    display: flex;
+}
+
+mat-form-field{
+  width: 17rem !important;  
+}
+mat-button-toggle {
+  width: 7rem;
+}
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard, 
+.mat-button-toggle-group-appearance-standard{
+  border: 0px solid transparent;
+  zoom: 0.8;
+}
+
+.mat-button-toggle-appearance-standard {
+  background-color: var(--light-blue) !important;
+  color: var(--white);
+}
+.mat-button-toggle-checked {
+  background-color: var(--dark-blue) !important;
+  color: var(--white);
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.list-container {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100vw;
+  margin:0;
+}
+.form-group {
+  display:flex;
+  flex-direction: column;
+}
+.radios {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  margin: 3rem 0 2rem 0;
+}
+
+.btn-primary {
+  margin: 0 0 0 calc(8.5rem - 2rem);
+  width: 4rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .inputs, .list-container {
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    text-align: center;
+  }
+}
