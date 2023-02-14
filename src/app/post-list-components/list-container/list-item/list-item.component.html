@@ -2,12 +2,10 @@
   <h3>{{ currentBrand }}</h3>
   <div class="small" *ngFor="let post of posts">
     <mat-card class="example-card">
-      <img src="{{post.picture}}"  alt="no image available">
+      <img src="data:image/png;base64, {{post.pictureBlob}}"  alt="no image available">
       <!-- <div> -->
         <mat-card-header>
           <mat-card-title-group>
-            <!-- <mat-card-title>{{ currentBrand }}</mat-card-title> -->
-            <!-- <mat-card-subtitle>Platform: {{ currentProfileType }}</mat-card-subtitle> -->
             <mat-card-subtitle>Platform: {{ post.profile_short_name}}</mat-card-subtitle>
             <mat-card-subtitle>Engagement: {{ post.engagement }}</mat-card-subtitle>
             <mat-card-subtitle>Created at: {{ post.created_time | date:'short'}}</mat-card-subtitle>

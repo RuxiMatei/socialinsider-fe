@@ -12,22 +12,11 @@
 }
 
 mat-card {
-  // display: flex !important;
   width: 90%;
 }
 
-// .mdc-card {
-//   // flex-direction: row;
-// }
 
 img {
-  -webkit-filter: grayscale(1);
-  /* Webkit */
-  filter: gray;
-  /* IE6-9 */
-  filter: grayscale(1);
-  /* W3C */
-
   width:100%;
 }
 

@@ -3,6 +3,7 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 import { Brand } from 'src/app/models/brand-model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Profile } from 'src/app/models/profile-model';
+import { DomSanitizer } from '@angular/platform-browser';
 import * as dayjs from 'dayjs';
 
 @Component({
@@ -45,21 +46,17 @@ export class ListContainerComponent {
     this.chosenBrand = brand.value;
     let brandName = brand.value.brandname;
     this.currentBrandName = brandName;
-    
   }
 
   onSubmit() {
     console.log(this.optionForm.value.brandName)
-    // console.log(this.optionForm.value.profile)
-    // this.chosenProfile = this.optionForm.value.profile
     console.log(this.optionForm.value.dateStart, 
       this.optionForm.value.dateEnd)
   
-    //   this.getPosts();
     this.getPosts();
   }
 
-
+//----
 
   getBrands(): void {
     this.api.getBrandsInProject().subscribe({
