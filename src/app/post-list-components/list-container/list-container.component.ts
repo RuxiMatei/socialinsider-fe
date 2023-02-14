@@ -12,14 +12,6 @@ import * as dayjs from 'dayjs';
 })
 export class ListContainerComponent {
 
-  dateRangeChange(dateRangeStart: HTMLInputElement, dateRangeEnd: HTMLInputElement) {
-    console.log(dateRangeStart.value);
-    console.log(dateRangeEnd.value);
-    if (this.chosenBrand &&
-      dateRangeStart.value &&
-      dateRangeEnd.value) this.onSubmit();
-  }
-
   brands!: Brand[];
   profiles: Profile[] = []; //of current selected brand
 
@@ -29,6 +21,8 @@ export class ListContainerComponent {
   currentBrandName: any;
 
   chosenBrand!: Brand;
+
+  dates = 0;
 
   optionForm = new FormGroup ({
     brandName: new FormControl(''),
@@ -43,6 +37,16 @@ export class ListContainerComponent {
     this.getBrands();
   }
 
+  dateRangeChange(dateRangeStart: HTMLInputElement, dateRangeEnd: HTMLInputElement) {
+    console.log(dateRangeStart.value);
+    console.log(dateRangeEnd.value);
+    if (this.chosenBrand &&
+      dateRangeStart.value &&
+      dateRangeEnd.value) {
+        this.onSubmit();
+        this.dates = 1; 
+      }
+  }
   onBrandSelected(brand: any) {
     this.chosenBrand = brand.value;
     let brandName = brand.value.brandname;

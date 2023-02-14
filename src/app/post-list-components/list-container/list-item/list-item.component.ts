@@ -10,5 +10,6 @@ export class ListItemComponent {
   @Input() posts: any[] = [];
   @Input() currentProfileType: any;
   @Input() currentBrand: any
+  @Input() dates!: number;
   
 }
