@@ -44,7 +44,7 @@ export class ListContainerComponent {
       dateRangeStart.value &&
       dateRangeEnd.value) {
         this.onSubmit();
-        this.dates = 1; 
+        this.dates ++; 
       }
   }
   onBrandSelected(brand: any) {
