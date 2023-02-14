@@ -3,7 +3,6 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 import { Brand } from 'src/app/models/brand-model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Profile } from 'src/app/models/profile-model';
-import { DomSanitizer } from '@angular/platform-browser';
 import * as dayjs from 'dayjs';
 
 @Component({
@@ -16,7 +15,9 @@ export class ListContainerComponent {
   dateRangeChange(dateRangeStart: HTMLInputElement, dateRangeEnd: HTMLInputElement) {
     console.log(dateRangeStart.value);
     console.log(dateRangeEnd.value);
-    this.onSubmit();
+    if (this.chosenBrand &&
+      dateRangeStart.value &&
+      dateRangeEnd.value) this.onSubmit();
   }
 
   brands!: Brand[];
@@ -46,6 +47,9 @@ export class ListContainerComponent {
     this.chosenBrand = brand.value;
     let brandName = brand.value.brandname;
     this.currentBrandName = brandName;
+    if (this.chosenBrand && 
+      this.optionForm.value.dateStart && 
+      this.optionForm.value.dateEnd) this.onSubmit();
   }
 
   onSubmit() {
