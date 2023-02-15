@@ -1,4 +1,4 @@
-<h4 *ngIf="posts.length == 0 && dates > 1"> No posts during this period.</h4>
+<h4 *ngIf="posts.length == 0 && dates >= 1"> No posts during this period.</h4>
 <div class="container" *ngIf="posts.length > 0">
   <h3>{{ currentBrand }}</h3>
   <div class="small" *ngFor="let post of posts">

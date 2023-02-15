@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 import { Brand } from 'src/app/models/brand-model';
 import { FormControl, FormGroup } from '@angular/forms';
